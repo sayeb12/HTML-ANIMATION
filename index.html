@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        @keyframes changeColor {
+            0% {
+                background-color: #4cc650; /* Initial color */
+            }
+            50% {
+                background-color: #7f03fc; /* Intermediate color */
+            }
+            100% {
+                background-color: #4cc650; /* Final color */
+            }
+        }
+
+        .button1, .button2 {
+            animation: changeColor 2s infinite;
+        }
+
+        @keyframes moveLeft {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes moveRight {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .g-btn {
+            animation: moveLeft 2s infinite;
+        }
+
+        .w-btn {
+            animation: moveRight 2s infinite;
+        }
+
+        body {
+            background-image: url(image/green.avif);
+            background-size: 70vh, contain;
+            background-repeat: no-repeat, no-repeat;
+            background-position: right 20%, left top;
+            background-color: #17302d;
+            font-family: "Poppins", sans-serif;
+        }
+
+        header {
+            margin-top: 35px;
+            font-weight: 100;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        header .pages {
+            width: 60%;
+            font-weight: 300;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        header .pages a {
+            font-size: 27px;
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        header .icons {
+            width: 7%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        header h1 .c-green {
+            color: #4cc650;
+        }
+
+        header h1 img {
+            width: 55px;
+            height: 55px;
+        }
+
+        header h1 {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        main {
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: right;
+            position: relative;
+            padding-left: 85px;
+        }
+
+        .section1 {
+            margin-top: 80px;
+        }
+
+        .section1 h2 {
+            font-size: 50px;
+            width: 22%;
+        }
+
+        .green-text {
+            color: #4cc650;
+        }
+
+        .c-white {
+            color: aliceblue;
+        }
+
+        .section1 p {
+            margin-bottom: 40px;
+            color: aliceblue;
+            width: 22%;
+        }
+
+        .section1 .button1 {
+            background-color: #4cc650;
+            font-weight: bold;
+            color: #ffffff;
+            width: 8%;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            margin-right: 30px;
+        }
+
+        .section1 .button2 {
+            background-color: rgba(255, 255, 255, 0.128);
+            color: #ffffff;
+            width: 8%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid whitesmoke;
+        }
+
+        .plant-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 130px;
+            width: 1000px;
+        }
+
+        article {
+            border: none;
+            border-radius: 15px;
+            width: 40%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.438);
+            display: flex;
+            justify-content: space-around;
+            backdrop-filter: blur(5px);
+        }
+
+        article img {
+            width: 30%;
+            height: 170px;
+            border-radius: 20px;
+        }
+
+        article h3 {
+            color: #ffffff;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        article h2 {
+            color: #ffffff;
+        }
+
+        article button {
+            color: #ffffff;
+            background-color: #4cc650;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+        }
+
+        .circle {
+            background-image: url(img/line\ 1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 500px;
+            width: 500px;
+            position: absolute;
+            top: 0px;
+            right: 200px;
+        }
+
+        .circle .tree {
+            width: 23%;
+            background-color: #4d5e49;
+            padding: 10px;
+            padding-bottom: 50px;
+            border-radius: 10px;
+            position: absolute;
+            top: 90px;
+            left: -30px;
+            box-shadow: 1px 1px 10px rgb(38, 36, 36);
+        }
+
+        .circle .tree1 {
+            width: 23%;
+            padding: 10px;
+            background-color: #1f5027;
+            border-radius: 10px;
+            position: absolute;
+            padding-bottom: 35px;
+            bottom: 20px;
+            right: 35px;
+        }
+
+        .circle .tree2 {
+            width: 23%;
+            padding: 10px;
+            padding-bottom: 50px;
+            background-color: #2c2f3e;
+            border-radius: 10px;
+            position: absolute;
+            left: 410px;
+            top: 30px;
+            padding-bottom: 50px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px black;
+        }
+
+        .circle .g-btn {
+            background-color: #4cc650;
+            width: 23%;
+            color: #ffffff;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            position: absolute;
+            left: 250px;
+            top: 55px;
+        }
+
+        .circle .w-btn {
+            background-color: #ffffff;
+            width: 23%;
+            color: #4cc650;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+            position: absolute;
+            bottom: 100px;
+            left: 80px;
+        }
+
+        .circle .tree img {
+            width: 93%;
+            border-radius: 14px;
+            height: auto;
+            display: block;
+            margin: 0px auto;
+        }
+
+        .circle .tree1 img {
+            width: 93%;
+            border-radius: 14px;
+            height: auto;
+            display: block;
+            margin: 0px auto;
+        }
+
+        .circle .tree2 img {
+            width: 93%;
+            border-radius: 14px;
+            height: auto;
+            display: block;
+            margin: 0px auto;
+        }
+
+        .dropbtn {
+            background-color: #4cc650;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ffb3d1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        .pagination {
+    margin-top: 10px; /* Decrease the top margin */
+    margin-bottom: 20px; /* Optionally adjust the bottom margin */
+    text-align: center;
+}
+
+
+.pagination a {
+    color: #4cc650;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #4cc650;
+    margin: 0 6px;
+    border-radius: 4px;
+}
+
+.pagination a.active {
+    background-color: #4cc650;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #f2f2f2;
+}
+
+
+        footer {
+    text-align: center;
+    color: white; /* Change text color to white */
+    font-size: 20px; /* Increase font size */
+    margin-top: 40px; /* Add some margin from the top */
+}
+
+    </style>
+
+</head>
+<body>
+<header>
+    <h1>
+        <img src="img/img.png" alt="" />
+        <span class="c-green">Green</span>
+        <span class="c-white">Plant</span>
+    </h1>
+
+    <nav class="pages">
+      <!-- Dropdown menu for Home -->
+      <div class="dropdown">
+          <button class="dropbtn">Home</button>
+          <div class="dropdown-content">
+              <a href="#">About Us</a>
+              <a href="#">Services</a>
+              <a href="#">Gallery</a>
+          </div>
+      </div>
+      
+      <!-- Dropdown menu for Shop -->
+      <div class="dropdown">
+          <button class="dropbtn">Shop</button>
+          <div class="dropdown-content">
+              <a href="#">Indoor Plants</a>
+              <a href="#">Outdoor Plants</a>
+              <a href="#">New Arrivals</a>
+          </div>
+      </div>
+      
+      <!-- Dropdown menu for Product -->
+      <div class="dropdown">
+          <button class="dropbtn">Product</button>
+          <div class="dropdown-content">
+              <a href="#">Plant Catagories</a>
+              <a href="#">Seasonal Specialist</a>
+              <a href="#">Plant Bundles</a>
+          </div>
+      </div>
+      
+      <!-- Dropdown menu for Blog -->
+      <div class="dropdown">
+          <button class="dropbtn">Blog</button>
+          <div class="dropdown-content">
+              <a href="#">Plant Care Tips</a>
+              <a href="#">Gardening Guides</a>
+              <a href="#">Plant Profiles</a>
+          </div>
+      </div>
+      
+      <!-- Dropdown menu for Page -->
+      <div class="dropdown">
+          <button class="dropbtn">Page</button>
+          <div class="dropdown-content">
+              <a href="#">About Us</a>
+              <a href="#">Our Plants</a>
+              <a href="#">Services</a>
+          </div>
+      </div>
+      
+      <!-- Dropdown menu for Contact -->
+      <div class="dropdown">
+          <button class="dropbtn">Contact</button>
+          <div class="dropdown-content">
+              <a href="#">Live CHat</a>
+              <a href="#">Visit Us</a>
+              <a href="#">Social Media Links</a>
+          </div>
+      </div>
+  </nav>
+  <nav class="icons">
+    <img src="svg/bell.svg" alt="" /><img
+    src="svg/search (1).svg"
+    alt=""
+    /><img src="svg/users-round.svg" alt="" />
+</nav>
+</header>
+<main>
+  <section class="section1">
+      <h2>
+        <span class="c-white"
+              >Grow Your Own <span class="green-text">Favourite</span> Plant</span
+            >
+      </h2>
+      <p>
+          We help first plant make your own beautiful garden with our plant
+          collection
+      </p>
+      <button class="button1">Explore Now</button>
+      <button class="button2">Learn More</button>
+  </section>
+  <section class="plant-info">
+      <article>
+          <img src="img/image 5.png" alt="" />
+
+          <div>
+              <h3>Trending Flowers</h3>
+              <h2>Plant for healthy</h2>
+              <button>Shop Now</button>
+          </div>
+      </article>
+      
+
+  </section>
+  
+  <section class="circle">
+      <button class="g-btn">Go Green</button>
+
+      <div class="tree">
+          <img src="img/image 3.png" alt="" />
+      </div>
+
+      <button class="w-btn">Green Plant</button>
+
+      <div class="tree1">
+          <img src="img/image 2.png" alt="" />
+      </div>
+      <div class="tree2">
+          <img src="img/Group 22.png" alt="" />
+      </div>
+  </section>
+  <div class="pagination">
+    <a href="#" class="prev">&laquo; Previous</a>
+    <a href="#" class="page-number active">1</a>
+    <a href="#" class="page-number">2</a>
+    <a href="#" class="page-number">3</a>
+    <a href="#" class="next">Next &raquo;</a>
+  </div>
+
+  <footer>
+    <p>&copy; Copyright by Sayeb</p>
+  </footer>
+</main>
+
+
+</body>
+</html>
